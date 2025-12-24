@@ -20,24 +20,35 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="App.h" />
+    <ClInclude Include="Buffer.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="DescriptorSet.h" />
     <ClInclude Include="Device.h" />
+    <ClInclude Include="FrameInfo.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="HWindow.h" />
+    <ClInclude Include="Input.h" />
     <ClInclude Include="Model.h" />
+    <ClInclude Include="pch.h" />
     <ClInclude Include="Pipeline.h" />
+    <ClInclude Include="PointLight.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="RendererSystem.h" />
     <ClInclude Include="SwapChain.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="App.cpp" />
+    <ClCompile Include="Buffer.cpp" />
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="DescriptorSet.cpp" />
     <ClCompile Include="Device.cpp" />
+    <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="Input.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="HWindow.cpp" />
     <ClCompile Include="Model.cpp" />
     <ClCompile Include="Pipeline.cpp" />
+    <ClCompile Include="PointLight.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="RendererSystem.cpp" />
     <ClCompile Include="SwapChain.cpp" />
@@ -45,6 +56,8 @@
   <ItemGroup>
     <None Include="compile.bat" />
     <None Include="Makefile" />
+    <None Include="shader\pointlight.frag" />
+    <None Include="shader\pointlight.vert" />
     <None Include="shader\shader.frag" />
     <None Include="shader\shader.vert" />
   </ItemGroup>

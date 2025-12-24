@@ -10,16 +10,19 @@
 
 namespace HN
 {
-	class RendererSystem
+	class PointLight
 	{
 	public:
-		RendererSystem(Device& Hdevice, VkRenderPass renderPass, VkDescriptorSetLayout globalSetLayout);
-		~RendererSystem();
 
-		RendererSystem(const RendererSystem&) = delete;
-		RendererSystem& operator=(const RendererSystem&) = delete;
+		PointLight(Device& HDevice, VkRenderPass renderPass, VkDescriptorSetLayout globalSetLayout);
+		~PointLight();
 
-		void renderGameObjects(FrameInfo& frameInfo);
+		PointLight(const PointLight&) = delete;
+		PointLight& operator=(const PointLight&) = delete;
+		
+		void update(FrameInfo& frameInfo, GlobalUbo& ubo);
+		void render(FrameInfo& frameInfo);
+
 	private:
 		void createPipelineLayout(VkDescriptorSetLayout globalSetLayout);
 		void createPipeline(VkRenderPass renderPass);

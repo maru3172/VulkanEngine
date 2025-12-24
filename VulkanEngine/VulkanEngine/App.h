@@ -1,4 +1,5 @@
 #pragma once
+#include "DescriptorSet.h"
 #include "Device.h"
 #include "GameObject.h"
 #include "Renderer.h"
@@ -27,6 +28,8 @@ namespace HN {
 		HWindow hWindow{ WIDTH, HEIGHT, "Vulkan Engine" };
 		Device device{ hWindow };
 		Renderer renderer{ hWindow, device };
-		std::vector<GameObject> gameObjects;
+
+		std::unique_ptr<DescriptorPool> globalPool{};
+		GameObject::Map gameObjects;
 	};
 }
