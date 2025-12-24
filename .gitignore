@@ -3,6 +3,12 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+# Vulkan SDK / Libraries
+VulkanEngine/library/
+*.lib
+*.dll
+*.exe
+
 # User-specific files
 *.rsuser
 *.suo
